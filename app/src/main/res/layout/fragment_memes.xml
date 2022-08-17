@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MemesFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meme_fragment_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterlayout" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floating_meme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:fab_addButtonColorNormal="@color/yellow"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_labelStyle="@style/costamfab"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/for_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_icon="@drawable/floating_gallery"
+            app:fab_size="mini"
+            app:fab_title="For gallery" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/for_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_icon="@drawable/ic_baseline_camera_alt_24"
+            app:fab_size="mini"
+            app:fab_title="For camera" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/for_collage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_icon="@drawable/floting_collage"
+            app:fab_size="mini"
+            app:fab_title="For collage" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+    <LinearLayout
+        android:id="@+id/filterlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_icons8_filter_30" />
+
+            <TextView
+                android:id="@+id/nofilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/filterback"
+                android:fontFamily="@font/regular"
+                android:padding="9dp"
+                android:text="No-Filter" />
+
+            <TextView
+                android:id="@+id/hindi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/filterback"
+                android:fontFamily="@font/regular"
+                android:padding="9dp"
+                android:text="Hindi" />
+
+            <TextView
+                android:id="@+id/english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/filterback"
+                android:fontFamily="@font/regular"
+                android:padding="9dp"
+                android:text="English" />
+
+            <TextView
+                android:id="@+id/bangali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/filterback"
+                android:fontFamily="@font/regular"
+                android:padding="9dp"
+                android:text="Bangali" />
+
+            <TextView
+                android:id="@+id/tmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@drawable/filterback"
+                android:fontFamily="@font/regular"
+                android:padding="9dp"
+                android:text="tmail" />
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
