@@ -1,84 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.MemesFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/meme_fragment_recycle"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filterlayout" />
 
     <ProgressBar
         android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.getbase.floatingactionbutton.FloatingActionsMenu
-        android:id="@+id/floating_meme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        app:fab_addButtonColorNormal="@color/yellow"
-        app:fab_addButtonPlusIconColor="@color/white"
-        app:fab_labelStyle="@style/costamfab"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/for_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/yellow"
-            app:fab_colorPressed="@color/yellow"
-            app:fab_icon="@drawable/floating_gallery"
-            app:fab_size="mini"
-            app:fab_title="For gallery" />
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/for_camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/yellow"
-            app:fab_colorPressed="@color/yellow"
-            app:fab_icon="@drawable/ic_baseline_camera_alt_24"
-            app:fab_size="mini"
-            app:fab_title="For camera" />
-
-        <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/for_collage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/yellow"
-            app:fab_colorPressed="@color/yellow"
-            app:fab_icon="@drawable/floting_collage"
-            app:fab_size="mini"
-            app:fab_title="For collage" />
-
-    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+        android:layout_centerInParent="true" />
 
 
-    <LinearLayout
-        android:id="@+id/filterlayout"
+
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        android:id="@+id/layout_hztab"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/filterlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
 
 
             <TextView
@@ -145,7 +98,64 @@
 
 
 
-    </LinearLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meme_fragment_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_hztab"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floating_meme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:fab_addButtonColorNormal="@color/yellow"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_labelStyle="@style/costamfab">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/for_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_icon="@drawable/floating_gallery"
+            app:fab_size="mini"
+            app:fab_title="For gallery" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/for_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_icon="@drawable/ic_baseline_camera_alt_24"
+            app:fab_size="mini"
+            app:fab_title="For camera" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/for_collage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/yellow"
+            app:fab_colorPressed="@color/yellow"
+            app:fab_icon="@drawable/floting_collage"
+            app:fab_size="mini"
+            app:fab_title="For collage" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

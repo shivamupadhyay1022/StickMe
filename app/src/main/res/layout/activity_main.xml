@@ -8,15 +8,15 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     tools:openDrawer="start">
-<!--<com.google.android.material.navigation.NavigationView-->
-<!--            android:id="@+id/nav_side"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="start"-->
-<!--            app:headerLayout="@layout/nav_header"-->
-<!--            app:menu="@menu/drawer_menu">-->
-<!--    <include layout="@layout/nav_header"></include>-->
-<!--</com.google.android.material.navigation.NavigationView>-->
+<com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_side"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/drawer_menu">
+    <include layout="@layout/nav_header"></include>
+</com.google.android.material.navigation.NavigationView>
 
 
 
@@ -48,66 +48,64 @@
             app:layout_constraintRight_toRightOf="@+id/toolbar"
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-<!--            <com.google.android.material.tabs.TabLayout-->
-<!--                android:id="@+id/tablayout"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="56dp"-->
-<!--                android:background="@color/yellow"-->
-<!--                android:elevation="12dp"-->
-<!--                app:tabGravity="fill"-->
-<!--                app:tabIndicatorColor="@color/white"-->
-<!--                app:tabMaxWidth="0dp"-->
-<!--                app:tabMode="fixed"-->
-<!--                app:tabSelectedTextColor="@color/white"-->
-<!--                tools:ignore="SpeakableTextPresentCheck" />-->
-
-            <LinearLayout
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablayout"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:orientation="horizontal"
-                android:background="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent">
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                android:layout_height="56dp"
+                android:background="@color/yellow"
+                android:elevation="12dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:background="@color/black"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="parent">-->
+<!--                <HorizontalScrollView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
 
-                        <TableRow>
-                            <Button
-                                android:text="Button1"/>
-                        </TableRow>
+<!--                    <TableLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="horizontal">-->
 
-                        <TableRow>
-                            <Button
-                                android:text="Button1"/>
-                        </TableRow>
+<!--                        <TableRow>-->
+<!--                            <Button-->
+<!--                                android:text="Button1"/>-->
+<!--                        </TableRow>-->
 
-                        <TableRow>
-                            <Button
-                                android:text="Button1"/>
-                        </TableRow>
+<!--                        <TableRow>-->
+<!--                            <Button-->
+<!--                                android:text="Button1"/>-->
+<!--                        </TableRow>-->
 
-                        <TableRow>
-                            <Button
-                                android:text="Button1"/>
-                        </TableRow>
+<!--                        <TableRow>-->
+<!--                            <Button-->
+<!--                                android:text="Button1"/>-->
+<!--                        </TableRow>-->
 
-
-                    </TableLayout>
-
-
-                </HorizontalScrollView>
-
+<!--                        <TableRow>-->
+<!--                            <Button-->
+<!--                                android:text="Button1"/>-->
+<!--                        </TableRow>-->
 
 
-            </LinearLayout>
+<!--                    </TableLayout>-->
+
+
+<!--                </HorizontalScrollView>-->
+
+
+
+<!--            </LinearLayout>-->
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"
